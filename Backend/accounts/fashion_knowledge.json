@@ -1,0 +1,143 @@
+{
+  "events": [
+    {
+      "name": "wedding",
+      "outfits": ["saree", "lehenga", "anarkali", "gown"],
+      "colors": ["red", "maroon", "gold", "emerald green", "royal blue", "pastel pink"],
+      "fabrics": ["silk", "chiffon", "georgette", "velvet"],
+      "accessories": ["jhumkas", "choker necklace", "bangles", "maang tikka", "clutch"],
+      "footwear": ["heels", "juttis", "embroidered sandals"],
+      "styles": ["traditional", "royal", "elegant"],
+      "tips": [
+        "Choose rich fabrics like silk or velvet for a luxurious look",
+        "Pair heavy outfits with statement jewelry",
+        "Opt for warm or festive colors"
+      ]
+    },
+    {
+      "name": "party",
+      "outfits": ["bodycon dress", "mini dress", "jumpsuit", "co-ord set"],
+      "colors": ["black", "silver", "gold", "neon", "bold red"],
+      "fabrics": ["sequins", "satin", "net"],
+      "accessories": ["statement earrings", "clutch", "layered necklace"],
+      "footwear": ["high heels", "strappy heels"],
+      "styles": ["bold", "trendy", "glam"],
+      "tips": [
+        "Go for shimmer or sequins for night events",
+        "Keep accessories minimal if outfit is loud",
+        "Experiment with bold colors"
+      ]
+    },
+    {
+      "name": "office",
+      "outfits": ["formal shirt", "trousers", "blazer", "kurti"],
+      "colors": ["white", "beige", "navy blue", "grey", "pastel"],
+      "fabrics": ["cotton", "linen"],
+      "accessories": ["watch", "minimal earrings", "handbag"],
+      "footwear": ["flats", "loafers", "low heels"],
+      "styles": ["formal", "minimal", "clean"],
+      "tips": [
+        "Stick to neutral tones for a professional look",
+        "Avoid flashy accessories",
+        "Choose breathable fabrics for comfort"
+      ]
+    },
+    {
+      "name": "casual",
+      "outfits": ["t-shirt", "jeans", "kurti", "top"],
+      "colors": ["light blue", "white", "pastel", "soft tones"],
+      "fabrics": ["cotton", "denim"],
+      "accessories": ["sling bag", "watch"],
+      "footwear": ["sneakers", "flats"],
+      "styles": ["comfortable", "relaxed"],
+      "tips": [
+        "Focus on comfort and simplicity",
+        "Use light fabrics for daily wear"
+      ]
+    },
+    {
+      "name": "date",
+      "outfits": ["maxi dress", "skirt-top", "off-shoulder dress"],
+      "colors": ["red", "pink", "black", "wine"],
+      "fabrics": ["chiffon", "satin"],
+      "accessories": ["delicate necklace", "bracelet"],
+      "footwear": ["heels", "sandals"],
+      "styles": ["romantic", "chic"],
+      "tips": [
+        "Choose flattering silhouettes",
+        "Soft makeup complements romantic outfits"
+      ]
+    },
+    {
+      "name": "festive",
+      "outfits": ["kurta set", "lehenga", "saree"],
+      "colors": ["yellow", "orange", "red", "gold"],
+      "fabrics": ["silk", "cotton silk"],
+      "accessories": ["bangles", "jhumkas", "bindi"],
+      "footwear": ["juttis", "heels"],
+      "styles": ["traditional", "vibrant"],
+      "tips": [
+        "Bright colors enhance festive mood",
+        "Layer accessories for a complete look"
+      ]
+    }
+  ],
+
+  "style_rules": [
+    {
+      "style": "minimal",
+      "description": "Clean, simple outfits with fewer accessories",
+      "colors": ["white", "beige", "pastel"],
+      "accessories": ["watch", "small studs"]
+    },
+    {
+      "style": "bold",
+      "description": "Eye-catching outfits with strong colors",
+      "colors": ["red", "black", "neon"],
+      "accessories": ["statement necklace", "large earrings"]
+    },
+    {
+      "style": "elegant",
+      "description": "Graceful and sophisticated outfits",
+      "colors": ["pastel", "cream", "navy"],
+      "accessories": ["pearls", "subtle jewelry"]
+    }
+  ],
+
+  "color_matching": [
+    {
+      "base": "black",
+      "matches": ["gold", "silver", "red"]
+    },
+    {
+      "base": "white",
+      "matches": ["blue", "pink", "beige"]
+    },
+    {
+      "base": "red",
+      "matches": ["gold", "black"]
+    }
+  ],
+
+  "accessory_rules": [
+    {
+      "outfit_type": "ethnic",
+      "recommended": ["jhumkas", "bangles", "maang tikka"]
+    },
+    {
+      "outfit_type": "western",
+      "recommended": ["minimal jewelry", "bracelet"]
+    }
+  ],
+
+  "footwear_rules": [
+    {
+      "outfit_type": "ethnic",
+      "recommended": ["juttis", "heels"]
+    },
+    {
+      "outfit_type": "casual",
+      "recommended": ["sneakers", "flats"]
+    }
+  ]
+}

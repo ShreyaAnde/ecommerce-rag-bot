@@ -1,0 +1,14 @@
+.theme-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background-color: white;
+  color: black;
+}
