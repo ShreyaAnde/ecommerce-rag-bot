@@ -31,12 +31,6 @@ from .serializers import (
 
 from .rag import get_answer, build_index
 
-# =========================
-# CLIENT INITIALIZATION
-# =========================
-
-# Groq client (USE ENV VARIABLE IN PRODUCTION)
-client = Groq(api_key="your_groq_api_key_here ")
 
 # Razorpay client
 razorpay_client = razorpay.Client(
@@ -63,93 +57,18 @@ logger = logging.getLogger(__name__)
 import uuid
 
 from .models import ChatHistory
-from .styling_rag import get_styling_context
-
-client = Groq(api_key="your_groq_api_key_here")
 
 
-@api_view(['POST'])
-def stylist_chat(request):
-    try:
-        query = request.data.get("question", "")
-        session_id = request.data.get("session_id")
 
-        if not session_id:
-            session_id = str(uuid.uuid4())
 
-        if not query:
-            return Response({"error": "No question provided"}, status=400)
 
-        # 🔥 Get RAG context
-        context = get_styling_context(query)
 
-        # 🔥 Prompt (VERY IMPORTANT)
-        messages = [
-            {
-                "role": "system",
-                "content": """
-You are a professional fashion stylist.
-
-Give stylish, clear, and helpful outfit advice.
-
-Always respond in this format:
-
-👗 Outfit:
-🎨 Colors:
-💍 Accessories:
-👡 Footwear:
-✨ Styling Tip:
-
-Keep it concise but elegant.
-"""
-            },
-            {
-                "role": "user",
-                "content": f"""
-Context:
-{context}
-
-User Question:
-{query}
-"""
-            }
-        ]
-
-        # 🔥 LLM call (UPDATED MODEL)
-        response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
-            messages=messages
-        )
-
-        answer = response.choices[0].message.content
-
-        # 🔥 Save history
-        ChatHistory.objects.create(
-            session_id=session_id,
-            role="user",
-            message=query
-        )
-
-        ChatHistory.objects.create(
-            session_id=session_id,
-            role="assistant",
-            message=answer
-        )
-
-        return Response({
-            "answer": answer,
-            "session_id": session_id
-        })
-
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        return Response({"error": str(e)}, status=500)
 # =========================
 # FAQ CHAT (RAG + AI)
 # =========================
 from groq import Groq
-client = Groq(api_key="your_groq_api_key_here")
+import os
+client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
 @api_view(['POST'])
 def faq_chat(request):
