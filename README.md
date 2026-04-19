@@ -38,11 +38,12 @@ A next-generation ecommerce platform where users don’t just search — they **
 
 ---
 
-## 🎬 Live Demo
+## 🎬 video Demo
 
-👉 Chat with AI → Get real-time product recommendations
+👉 Chat with AI → Get real-time faq and stylisg suggestions
+Click to view video → [Download / View Demo](./ecommerce-rag-demo.mp4)
 
-![Chatbot Demo](./assets/chatbot-demo.gif)
+
 
 ---
 
